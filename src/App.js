@@ -33,7 +33,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Assignment 2</h1>
-        <textarea cols="40" rows="5" onChange={this.textChangedHandler}/>
+        <textarea cols="40" rows="5" onChange={this.textChangedHandler} >
+          {this.state.input}
+        </textarea>
         <ValidationComponent
           inputLength={this.state.inputLength} >
         </ValidationComponent>
