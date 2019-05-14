@@ -19,6 +19,14 @@ class App extends Component {
 
   charClicked = (event) => {
     console.log(`Index is: ${event.target.dataset.id}`);
+    const i = event.target.dataset.id;
+
+    const newInput = [...this.state.input];
+    newInput.splice(i, 1).join();
+
+    this.setState({
+      input: newInput
+    });
   }
 
   render = () => {
