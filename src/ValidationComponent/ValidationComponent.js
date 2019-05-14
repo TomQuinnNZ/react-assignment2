@@ -1,8 +1,9 @@
 import React from 'react';
+import './ValidationComponent.css';
 
-const ValidationComponent = (props) => {
+const validationComponent = (props) => {
 
-    const result;
+    let result = '';
 
     if (props.inputLength < 5) {
         result = 'Text too short';
@@ -10,8 +11,8 @@ const ValidationComponent = (props) => {
     else result = '';
 
     return (
-        <div className="ValidationComponent">
-            <p>{result}</p>
-        </div>
+        <p className="ValidationComponent">{result}</p>
     );
 }
+
+export default validationComponent;
