@@ -26,6 +26,12 @@ class App extends Component {
           inputLength={this.state.inputLength} >
         </ValidationComponent>
         <p>Input length: {this.state.inputLength}</p>
+        <div className="Characters">
+          {[...this.state.input].map((value, index) => {
+            return <CharComponent character={value} />
+          })}
+        </div>
+
       </div>
     );
   }
