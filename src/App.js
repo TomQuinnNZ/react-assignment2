@@ -28,7 +28,11 @@ class App extends Component {
         <p>Input length: {this.state.inputLength}</p>
         <div className="Characters">
           {[...this.state.input].map((value, index) => {
-            return <CharComponent character={value} />
+            return (<CharComponent 
+                      character={value}
+                      click={this.charClicked} >
+                    </CharComponent>
+                    )
           })}
         </div>
 
