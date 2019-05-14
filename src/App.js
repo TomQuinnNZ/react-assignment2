@@ -17,6 +17,10 @@ class App extends Component {
     });
   }
 
+  charClicked = (event) => {
+    console.log(`Index is: ${event.target.dataset.id}`);
+  }
+
   render = () => {
     return (
       <div className="App">
@@ -29,6 +33,7 @@ class App extends Component {
         <div className="Characters">
           {[...this.state.input].map((value, index) => {
             return (<CharComponent 
+                      index={index}
                       character={value}
                       click={this.charClicked} >
                     </CharComponent>
