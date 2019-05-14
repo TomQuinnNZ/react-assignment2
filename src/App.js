@@ -4,12 +4,12 @@ import './App.css';
 class App extends Component {
 
   state = {
-    inputLenght: 0
+    inputLength: 0
   }
 
   textChangedHandler = (event) => {
     this.setState({
-      
+      inputLength: event.target.value.length
     });
   }
 
@@ -17,7 +17,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Assignment 2</h1>
-        <input type="text" onChange={textChangedHandler}/>
+        <textarea cols="40" rows="5" onChange={this.textChangedHandler}/>
+        <p>Input length: {this.state.inputLength}</p>
       </div>
     );
   }
