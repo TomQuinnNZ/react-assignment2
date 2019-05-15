@@ -21,19 +21,23 @@ class App extends Component {
     console.log(`Index is: ${event.target.dataset.id}`);
     const i = event.target.dataset.id;
 
-    const newInput = [...this.state.input];
-    newInput.splice(i, 1).join();
+    let newInput = [...this.state.input];
+    newInput.splice(i, 1);
+
+    const stringInput = newInput.join("");
 
     this.setState({
-      input: newInput
+      input: stringInput
     });
+
+    console.log(`state: ${newInput}`);
   }
 
   render = () => {
     return (
       <div className="App">
         <h1>Assignment 2</h1>
-        <textarea cols="40" rows="5" onChange={this.textChangedHandler} >
+        <textarea cols="40" rows="5" value={this.state.input} onChange={this.textChangedHandler} >
           {this.state.input}
         </textarea>
         <ValidationComponent
