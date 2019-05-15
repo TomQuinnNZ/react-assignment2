@@ -10,8 +10,11 @@ const validationComponent = (props) => {
     }
     else result = '';
 
+    // Use ternary operator to return different paragraph element based on input check
     return (
-        <p className="ValidationComponent">{result}</p>
+            props.inputLength > 5 ? 
+                <p className="ValidationSuccess">Text is long enough.</p> :
+                <p className="ValidationFail">Text too short!</p>
     );
 }
 

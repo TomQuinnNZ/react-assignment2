@@ -1,3 +1,7 @@
-.ValidationComponent {
+.ValidationSuccess {
+    color: green;
+}
+
+.ValidationFail {
     color: red;
 }
