@@ -26,8 +26,11 @@ class App extends Component {
 
     const stringInput = newInput.join("");
 
+    const newLength = this.state.inputLength - 1;
+
     this.setState({
-      input: stringInput
+      input: stringInput,
+      inputLength: newLength
     });
 
     console.log(`state: ${newInput}`);
